@@ -6,29 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="375dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="30dp"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/loginpic" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-black"
         android:text="Log In"
         android:textColor="@color/primaryBlue"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/inventorylogo" />
 
     <TextView
         android:id="@+id/textView3"
@@ -84,6 +73,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:textColor="@color/primaryBlue" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -193,5 +183,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:srcCompat="@drawable/yahoologin" />
+
+    <ImageView
+        android:id="@+id/inventorylogo"
+        android:layout_width="424dp"
+        android:layout_height="226dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/inventory_icon2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
