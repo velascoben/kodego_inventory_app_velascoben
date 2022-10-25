@@ -47,6 +47,7 @@
         app:startIconDrawable="@drawable/icon_person">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/primaryBlue" />
@@ -71,6 +72,7 @@
         app:startIconDrawable="@drawable/icon_pass">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -79,7 +81,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
@@ -122,7 +124,7 @@
         android:text="Don't have an account?"
         android:textColor="@color/primaryBlue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <TextView
         android:id="@+id/textView5"
@@ -134,7 +136,7 @@
         android:textColor="@color/primaryBlue"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <TextView
         android:id="@+id/textView6"
@@ -149,7 +151,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnFacebook"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="100dp"
@@ -161,19 +163,19 @@
         app:srcCompat="@drawable/facebookicon" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnGmail"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
         android:background="@color/primaryWhite"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/btnYahoo"
+        app:layout_constraintStart_toEndOf="@+id/btnFacebook"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:srcCompat="@drawable/googlelogin" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnYahoo"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
@@ -186,8 +188,8 @@
 
     <ImageView
         android:id="@+id/inventorylogo"
-        android:layout_width="424dp"
-        android:layout_height="226dp"
+        android:layout_width="416dp"
+        android:layout_height="221dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
