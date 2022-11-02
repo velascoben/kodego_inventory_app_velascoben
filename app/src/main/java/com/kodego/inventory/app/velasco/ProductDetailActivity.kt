@@ -1,6 +1,5 @@
 package com.kodego.inventory.app.velasco
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kodego.inventory.app.velasco.databinding.ActivityProductDetailBinding
@@ -17,9 +16,11 @@ class ProductDetailActivity : AppCompatActivity() {
         var itemName : String? = intent.getStringExtra("itemName")
         var itemDescription : String? = intent.getStringExtra("itemDescription")
         var itemImage : Int = intent.getIntExtra("itemImage",0)
+        var itemQuantity : Int = intent.getIntExtra("itemQuantity",0)
 
         binding.itemImage.setImageResource(itemImage)
         binding.itemName.text = itemName
         binding.itemDescription.text = itemDescription
+        binding.itemQuantity.text = itemQuantity.toString()
     }
 }

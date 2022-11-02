@@ -4,4 +4,12 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">LOGIN</string>
+    <string name="extended_fab_content_desc">Add Item</string>
+    <string name="extended_fab_label">Add Item</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_mobile">Enter Mobile</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="item_description">Item Description</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_quantity">Item Quantity</string>
 </resources>

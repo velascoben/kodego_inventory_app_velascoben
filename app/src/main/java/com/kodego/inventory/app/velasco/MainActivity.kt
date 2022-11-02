@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("nameID",correctUsername1)
             startActivity(intent)
             finish()
-            Toast.makeText(applicationContext,"Logging in...",Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"Logged in...",Toast.LENGTH_SHORT).show()
             return true
         } else {
             Toast.makeText(applicationContext,"Invalid Credentials",Toast.LENGTH_SHORT).show()

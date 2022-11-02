@@ -9,6 +9,8 @@ class ProductAdapter(val products : List<Products>) : RecyclerView.Adapter<Produ
 
     var onItemClick : ((Products) -> Unit)? = null
 
+    var onUpdateClick : ((Products, Int) -> Unit)? = null
+
     inner class ProductViewHolder(val binding:RowItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -22,6 +24,11 @@ class ProductAdapter(val products : List<Products>) : RecyclerView.Adapter<Produ
             imgProduct.setImageResource(products[position].imageName)
             tvItemName.text = products[position].itemName
             tvDescription.text = products[position].itemDescription
+            tvQuantity.text = products[position].itemQuantity.toString()
+            imgUpdate.setOnClickListener() {
+                onUpdateClick?.invoke(products[position],position)
+            }
+
         }
 
         holder.itemView.setOnClickListener() {
