@@ -5,11 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kodego.inventory.app.velasco.databinding.RowItemBinding
 
-class ProductAdapter(val products : List<Products>) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+open class ProductAdapter(val products : MutableList<Products>) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     var onItemClick : ((Products) -> Unit)? = null
 
     var onUpdateClick : ((Products, Int) -> Unit)? = null
+
+    var onDeleteClick : ((Products, Int) -> Unit)? = null
 
     inner class ProductViewHolder(val binding:RowItemBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -23,10 +25,15 @@ class ProductAdapter(val products : List<Products>) : RecyclerView.Adapter<Produ
         holder.binding.apply {
             imgProduct.setImageResource(products[position].imageName)
             tvItemName.text = products[position].itemName
-            tvDescription.text = products[position].itemDescription
-            tvQuantity.text = products[position].itemQuantity.toString()
+//            tvDescription.text = products[position].itemDescription
+            tvQuantity.text = "Stock:  ${products[position].itemQuantity.toString()}"
+
             imgUpdate.setOnClickListener() {
                 onUpdateClick?.invoke(products[position],position)
+            }
+
+            imgDelete.setOnClickListener() {
+                onDeleteClick?.invoke(products[position],position)
             }
 
         }

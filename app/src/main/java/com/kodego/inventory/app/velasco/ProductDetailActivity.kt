@@ -21,6 +21,6 @@ class ProductDetailActivity : AppCompatActivity() {
         binding.itemImage.setImageResource(itemImage)
         binding.itemName.text = itemName
         binding.itemDescription.text = itemDescription
-        binding.itemQuantity.text = itemQuantity.toString()
+        binding.itemQuantity.text = "Stock: ${itemQuantity.toString()}"
     }
 }

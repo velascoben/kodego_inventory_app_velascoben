@@ -9,7 +9,8 @@
     <string name="enter_name">Enter Name</string>
     <string name="enter_mobile">Enter Mobile</string>
     <string name="enter_address">Enter Address</string>
-    <string name="item_description">Item Description</string>
-    <string name="item_name">Item Name</string>
-    <string name="item_quantity">Item Quantity</string>
+    <string name="item_description">Description</string>
+    <string name="item_name">Name</string>
+    <string name="item_quantity">Quantity</string>
+    <string name="add_photo">Add Photo</string>
 </resources>
